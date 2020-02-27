@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, aqua, green);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+
+.searchPhoto {
+  padding: 15px;
+  border-radius: 2em;
+  font-style: oblique;
+}
+
+.searchPhoto:focus {
+  border: red 2px solid;
+  box-shadow: 4px 4px 1px red;
+  outline: none;
+}
+
+p {
+  display: none;
+}
+
+nav {
+  margin: 30px;
+}
+
+/*a {
+  margin: 3em;
+}*/
+
+img {
+  transition: .7s;
+  margin: 3em auto;
+  display: block;
+}
+
+img:hover {
+  transform: rotate(360deg);
+  /*transform: rotate(10deg);*/
+  transition: 1s;
+}
+
+.fancybox-container {
+  background-color: black;
+  opacity: 50;
+}
+
+.fancybox-caption {
+  background-image: linear-gradient(grey, black); 
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+main {
+  min-height: 80%;
+}
+
+@media (min-width: 769px) {
+  .searchPhoto {
+    width: 30em;
+  }
+
+  main {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 85%;
+  }
+
+  img {
+    margin: 3em;
+  }
+
+  .fancybox-caption {
+    max-width: 40%;
+    border-radius: 1em;
+    margin: auto;
+    text-align: left;
+    font-size: 1.2em;
+    bottom: 0;
+  }
+}
